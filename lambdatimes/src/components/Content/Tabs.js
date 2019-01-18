@@ -7,11 +7,11 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map(data => {
+        {props.tabs.filter((data) => {
           return <Tab
             selectTabHandler={data.selectTabHandler}
-            selected={data.selected}
-            tabs={data.tabs}
+            selectedTab={data.selectedTab}
+            tab={data.tab}
           />
         })}
       </div>

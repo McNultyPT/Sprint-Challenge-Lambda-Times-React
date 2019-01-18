@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import Card from './Card';
 
 const Cards = props => {
-  console.log(props)
   return (
     <div className="cards-container">
-      {props.cards.map(data => {
+      {props.cards.map((data, index) => {
         return <Card
           card={data.card}
+          key={index}
+          headline={data.headline}
+          tab={data.tab}
+          img={data.img}
+          author={data.author}
         />
       })}
     </div>
