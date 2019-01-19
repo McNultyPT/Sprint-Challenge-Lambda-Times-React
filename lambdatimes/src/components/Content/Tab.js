@@ -1,11 +1,10 @@
 import React from 'react';
 
 const Tab = props => {
-  console.log(props);
   return (
     <div
       className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
-      onClick={() => {props.changeSelected(props.tab)}
+      onClick={ () => {props.selectTabHandler(props.data)}
     }>
       {props.tab.toUpperCase()}
     </div>
