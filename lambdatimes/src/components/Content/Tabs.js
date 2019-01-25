@@ -3,6 +3,7 @@ import Tab from './Tab';
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
+  console.log(props);
   return (
     <div className="tabs">
       <div className="topics">
