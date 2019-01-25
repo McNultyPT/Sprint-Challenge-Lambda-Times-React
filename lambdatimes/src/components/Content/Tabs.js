@@ -3,16 +3,16 @@ import Tab from './Tab';
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
-  console.log(props);
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map( data => {
+        {props.tabs.map( (data, index) => {
           return <Tab
-            changeSelected={data.changeSelected}
-            selected={data.selected}
+            changeSelected={props.changeSelected}
+            selected={props.selected}
             tab={data}
+            key={index}
           />
         })}
         {/* map over the tabs provided on your props, create a new Tab component for each one.

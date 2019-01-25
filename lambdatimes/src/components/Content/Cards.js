@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Cards = props => {
   return (
@@ -22,13 +22,13 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
-// Cards.propTypes = {
-//   cards: propTypes.array,
-//   author: propTypes.string,
-//   headline: propTypes.string,
-//   img: propTypes.string,
-//   tab: propTypes.string
-// }
+Cards.propTypes = {
+  cards: PropTypes.array,
+  author: PropTypes.string,
+  headline: PropTypes.string,
+  img: PropTypes.string,
+  tab: PropTypes.string
+}
 
 
 export default Cards;
