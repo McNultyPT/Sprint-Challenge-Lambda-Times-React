@@ -1,17 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   return (
     <div
+
       className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
       onClick={ () => {props.selectTabHandler(props.data)}
     }>
+
       {props.tab.toUpperCase()}
     </div>
   );
 };
 
 // Make sure you include PropTypes on your props.
+
+Tab.propTypes = {
+  tab: PropTypes.string,
+  selected: PropTypes.string,
+  changeSelected: PropTypes.func
+}
+
+
 export default Tab;
 
 /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 

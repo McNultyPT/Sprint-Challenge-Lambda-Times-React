@@ -1,7 +1,8 @@
-1)  PropTypes is basically checking what type of data is being passed. It's important to use PropTypes beacuse it makes it easy for other developers to know what type of data you are importing.
+1) PropTypes are used to type check data being passed down as props. It's important to check that data because it's easy to lose track of what type of data is being passed. It's an easy way to prevent bugs.
 
-2) It's a set of phases in a React components life. The 3 phases are Mounting, Updating and Un-mounting. The data will be defined then render will be called along with componentDidMount. Then if setState is used the component's state data will be called then it will render again.
+2) There is the Mounting Phase, in which you set your data and render and the CDM are invoked. The Updating Phase can be used to setState , which will force another render. Then finally, the Un-mounting phase where a component is unmounted or removed.
 
-3) An HOC is a function that takes a Component as a an argument and returns a new component, which is useful for when there is shared functionality between components.
+3) An HOC allows us to reuse a component by receiving a component as an argument and returning a new component. It allows for shared functionality when components are very similar, so you don't have to make a new component from scratch.
 
-4) You could use regular CSS in a separate folder, which helps to keep things more compartmentalized, and is useful for certain elements that cannot be styled using other methods. There is also Reactstrap, which uses libraries to implent styled components. It can expedite the styling process because of its prebuilt components. Lastly, Styled-Components allows is to write CSS in the JS file. It's useful for keeping all the code for a component in one file.
+4) You could use CSS in a separate CSS file, which is beneficial for keeping the styling separate from the rest of the code. You could also use a library like Reactstrap, which has prebuilt components, which can help expedite the building process but limits you to the what the library has to offer. Lastly, you could write you CSS in JS by using Styled-Components, which allows for all of the code to be in one file, and you can reuse styled-components in areas that have the same stylings. It really is just convenience and preference to a certain degree.
+
